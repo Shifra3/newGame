@@ -22,13 +22,17 @@ function preload(){
 }
 
 function setup(){
-    canvas = createCanvas(1600,800)
+    canvas = createCanvas(windowWidth,windowHeight)
     engine = Engine.create();
     world = engine.world;
-    police = new PoliceSubmarine(200,750,200,200)
-    ground  = new Ground(800,790,1600,10)
-    target = new Target(300,100,200,200)
-    ground1= new Ground(400,200,300,20)
+    console.log(windowHeight)
+    police = new PoliceSubmarine(width/6,height-50,width/8,width/8)
+    console.log(police.body.position.x)
+    ground  = new Ground(width/2,height-10,width,width/100)
+    target = new Target(width/5.5,height/4,width/8,width/8)
+    ground1= new Ground(width/4,height/3.75,width/5,height/37)
+    
+    
     score=0
     fill(0)
     textSize(32)
